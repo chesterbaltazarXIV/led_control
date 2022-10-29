@@ -1,0 +1,2 @@
+# Ignore database files in the repository
+*.sqlite3
