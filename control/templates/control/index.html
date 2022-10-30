@@ -1,9 +1,55 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My Title</title>
+        <title>github</title>
+        <style>
+            p{
+                font-size: xx-large;
+                color: greenyellow;
+                text-align: center;
+                font-family:'Courier New', Courier, monospace;
+            }
+            body{
+               background-color: #666;
+               color: white;
+               font-size: 25px;
+            }
+            .ledcontrol{
+                display: inline-block;
+                padding: 15px 25px;
+                font-size: 24px;
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                color: #fff;
+                background-color: #4CAF50;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0 9px #999;
+                text-align-last: calc(22222);
+                font-size: medium;
+                position: absolute;
+                top: 50%;
+                left: 45%;
+                transform translate(-50, -50)
+            }
+            .ledcontrol:hover {background-color: #3e8e41}
+            .ledcontrol:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+            
+        </style>
     </head>
     <body>
-        <p>Hello World!</p>
+        <p>LED CONTROL</p>
+        <div class="ledcontrol">
+            <form method="POST">
+                {%csrf_token%}
+                <input type="submit" value="ON" name="turn_on">
+                <input type="submit" value="OFF" name="turn_off">
+            </div>            
+        </div>
     </body>
 </html>

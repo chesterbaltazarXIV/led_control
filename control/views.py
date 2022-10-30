@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 import serial, time
 
-com = serial.Serial("COM13")
+com = serial.Serial("COM8")
 
 # Create your views here.
 def index(request):
